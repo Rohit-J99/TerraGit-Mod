@@ -4,6 +4,6 @@ resource "aws_instance" "myec2vm" {
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.vpc-ssh.id, aws_security_group.vpc-web.id]
   tags = {
-    "Name" = "EC2-R2"
+    "Name" = "EC2-R3"
   }
 }
