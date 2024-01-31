@@ -21,14 +21,14 @@ pipeline {
         stage("Terraform Initialize") {
             steps {
                 echo 'initializing terraform..'
-                sh "terrform init"
+                sh "terraform init"
             }
         }
 
         stage("Terraform Validate") {
             steps {
                 echo 'validating..'
-                sh "terrform validate"
+                sh "terraform validate"
             }
         }
 
@@ -36,7 +36,7 @@ pipeline {
         stage("Terraform Plan") {
             steps {
                 echo 'planning..'
-                sh "terrform plan"
+                sh "terraform plan"
             }
         }
 
@@ -44,7 +44,7 @@ pipeline {
         stage("Terraform Apply") {
             steps {
                 echo 'aprroved..'
-                sh "terrform plan -auto-approve"
+                sh "terraform plan -auto-approve"
             }
         }
 
