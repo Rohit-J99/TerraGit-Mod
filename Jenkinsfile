@@ -7,7 +7,7 @@ pipeline {
         stage("Git Clean") {
             steps {
                 echo 'aprroved..'
-                sh "rm -r .\\TerraGit-Mod"
+                sh "rm -r TerraGit-Mod"
             }
         }
 
