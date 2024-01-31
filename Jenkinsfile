@@ -39,6 +39,13 @@ pipeline {
                 sh "terrform plan -auto-approve"
             }
         }
+
+        stage("Git Clean") {
+            steps {
+                echo 'aprroved..'
+                sh "rm -r .\\TerraGit-Mod"
+            }
+        }
         
     }
         post {
