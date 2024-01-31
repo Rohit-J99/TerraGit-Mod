@@ -3,6 +3,14 @@ pipeline {
     agent any
     
     stages {
+
+        stage("Git Clean") {
+            steps {
+                echo 'aprroved..'
+                sh "rm -r .\\TerraGit-Mod"
+            }
+        }
+
         stage("git clone") {
             steps {
                 echo 'initializing terraform..'
@@ -40,12 +48,6 @@ pipeline {
             }
         }
 
-        stage("Git Clean") {
-            steps {
-                echo 'aprroved..'
-                sh "rm -r .\\TerraGit-Mod"
-            }
-        }
         
     }
         post {
